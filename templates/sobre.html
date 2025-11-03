@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/sobre.css">
+    <title>Quem Somos - JCS Alimentos</title>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../img/logojcs.png" alt="JCS Alimentos Logo" class="logo-img">
+                <div class="logo-text"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="produtos.html">Produtos e Fornecedores</a></li>
+                    <li><a href="home.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="contact-header">📞 (11) 4462-6685</div>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="sobre">
+        <div class="floating-fruits">
+            <div class="fruit">🍎</div>
+            <div class="fruit">🍊</div>
+            <div class="fruit">🍌</div>
+            <div class="fruit">🍇</div>
+            <div class="fruit">🥕</div>
+            <div class="fruit">🍅</div>
+            <div class="fruit">🥬</div>
+            <div class="fruit">🍓</div>
+        </div>
+
+        <div class="sobre-container">
+            <!-- Coluna Esquerda - Quem Somos -->
+            <div class="sobre-text">
+                <h2>QUEM SOMOS</h2>
+                
+                <p>A JCS Alimentos atua no mercado de licitações desde 2012, distribuindo alimentos perecíveis, estocáveis e hortifrutigranjeiros para a alimentação escolar, atacados para supermercados, quitandas, mercearias, entre outros locais.</p>
+
+                <ul>
+                    <li>A empresa possui amplo centro de armazenagem e distribuição, equipado com câmaras frigoríficas para perfeito armazenamento e conservação dos alimentos.</li>
+
+                    <li>Frota própria, equipada com baús frigoríficos dotados de aparelhos de refrigeração para a perfeita conservação da temperatura dos alimentos.</li>
+
+                    <li>Nutricionista para a fiscalização do processo de recebimento, armazenamento e carregamento dos alimentos, garantindo maior controle de qualidade dos produtos fornecidos.</li>
+
+                    <li>Os alimentos comercializados são procedentes de estabelecimentos registrados nos órgãos competentes, garantindo, assim, a devida fiscalização na sua origem.</li>
+
+                    <li>Produtos hortifrutigranjeiros selecionados e acondicionados em caixas plásticas retornáveis.</li>
+
+                    <li>Registro no CRN - Conselho Regional de Nutricionistas SP-MS 3ª região sob o número "PJ" 15425.</li>
+                </ul>
+
+                <div class="destaque">
+                    Somos especializados em distribuição "ponto a ponto" dos alimentos diretamente nas unidades escolares.
+                </div>
+            </div>
+
+            <!-- Coluna Direita - Nossa Missão -->
+            <div class="missao-container">
+                <img src="../img/criancas-escola.png" alt="Crianças na escola" class="missao-image" onerror="this.style.display='none'">
+                
+                <div class="missao-box">
+                    <h3>NOSSA MISSÃO</h3>
+
+                    <div class="missao-item">
+                        <strong>1ª – Garantir credibilidade</strong>
+                        <p>Oferecemos hortifrútis frescos e alimentos estocáveis de primeira qualidade, com as melhores marcas e preços competitivos.</p>
+                    </div>
+
+                    <div class="missao-item">
+                        <strong>2ª – Crescer com parcerias sólidas</strong>
+                        <p>Mantemos relacionamentos duradouros através de atendimento personalizado e compromisso com Clientes e Fornecedores.</p>
+                    </div>
+
+                    <div class="missao-item">
+                        <strong>3ª – Entregar frescor e qualidade</strong>
+                        <p>Nossos produtos passam por rigoroso controle de qualidade e são transportados em frota própria refrigerada, garantindo que hortifrútis mantenham o frescor e estocáveis cheguem em perfeito estado, na data e horário solicitados.</p>
+                    </div>
+
+                    <div class="missao-item">
+                        <strong>4ª – Comprar direto da fonte</strong>
+                        <p>Adquirimos hortifrútis de produtores rurais e estocáveis de fabricantes, garantindo produtos recentes, máximo frescor e os melhores preços.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>JCS Alimentos</strong> - Alimentação Escolar de Qualidade</p>
+        <p>© 2025 JCS Alimentos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Burger menu toggle
+        const burgerMenu = document.querySelector('.burger-menu');
+        const nav = document.querySelector('nav');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

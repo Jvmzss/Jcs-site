@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - JCS Alimentos</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../img/logojcs.png" alt="JCS Alimentos Logo" class="logo-img">
+                <div class="logo-text"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="produtos.html">Produtos e Fornecedores</a></li>
+                    <li><a href="home.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="contact-header">📞 (11) 4462-6685</div>
+        </div>
+    </header>
+
+    <section id="produtos">
+        <br>
+        <h2 class="section-title">Nossos Produtos</h2>
+        <p class="section-subtitle">Trabalhamos com hortifruti disponível no CEAGESP, garantindo frescor e qualidade para a alimentação escolar</p>
+        
+        <div style="text-align: center; margin-bottom: 40px; padding: 30px; background: #e8f5e9; border-radius: 15px;">
+            <p style="font-size: 16px; color: #2e7d32; margin-bottom: 15px;">
+                <strong>🏪 Fornecimento direto do CEAGESP</strong>
+            </p>
+            <p style="color: #666;">
+                Todos os nossos produtos são adquiridos diretamente no CEAGESP, garantindo frescor, qualidade e os melhores preços para a alimentação escolar. Clique nos produtos abaixo para ver mais informações na Hortipédia do CEAGESP.
+            </p>
+        </div>
+
+        <!-- Barra de Pesquisa -->
+        <div style="max-width: 600px; margin: 0 auto 40px;">
+            <div style="position: relative;">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar produto..." 
+                    style="width: 100%; padding: 15px 50px 15px 20px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 16px; transition: all 0.3s;"
+                >
+                <button 
+                    onclick="clearSearch()" 
+                    id="clearBtn"
+                    style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #999; cursor: pointer; font-size: 20px; display: none;"
+                >×</button>
+            </div>
+            <p id="searchResults" style="text-align: center; margin-top: 15px; color: #666; font-size: 14px;"></p>
+        </div>
+
+        <!-- Aqui você coloca sua lista de produtos -->
+         <div class="produtos-lista">
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/abacate/" target="_blank">
+                    <img src="../img/icones_abacate.png" alt="Abacate">
+                    <span>Abacate</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/abacaxi-2/" target="_blank">
+                    <img src="../img/icones_abacaxi.png" alt="Abacaxi">
+                    <span>Abacaxi</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/abobora/" target="_blank">
+                    <img src="../img/icones_abobora.png" alt="Abóbora">
+                    <span>Abóbora</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/abobrinha/" target="_blank">
+                    <img src="../img/icones_abobrinha.png" alt="Abobrinha">
+                    <span>Abobrinha</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/acelga/" target="_blank">
+                    <img src="../img/icones_acelga.png" alt="Acelga">
+                    <span>Acelga</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/acerola/" target="_blank">
+                    <img src="../img/icones_acerola.png" alt="Acerola">
+                    <span>Acerola</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/agriao/" target="_blank">
+                    <img src="../img/icones_agriao.png" alt="Agrião">
+                    <span>Agrião</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/alcachofra/" target="_blank">
+                    <img src="../img/icones_alcachofra.png" alt="Alcachofra">
+                    <span>Alcachofra</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/alecrim/" target="_blank">
+                    <img src="../img/icones_alecrim.png" alt="Alecrim">
+                    <span>Alecrim</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/alface/" target="_blank">
+                    <img src="../img/icones_alface.png" alt="Alface">
+                    <span>Alface</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/alho/" target="_blank">
+                    <img src="../img/icones_alho.png" alt="Alho">
+                    <span>Alho</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/alho-poro/" target="_blank">
+                    <img src="../img/icones_alho-poro.png" alt="Alho-poró">
+                    <span>Alho-poró</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/almeirao/" target="_blank">
+                    <img src="../img/icones_almeirao.png" alt="Almeirão">
+                    <span>Almeirão</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/ameixa/" target="_blank">
+                    <img src="../img/icones_ameixa.png" alt="Ameixa">
+                    <span>Ameixa</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/atemoia/" target="_blank">
+                    <img src="../img/icones_atemoia.png" alt="Atemóia">
+                    <span>Atemóia</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/banana/" target="_blank">
+                    <img src="../img/icones_banana.png" alt="Banana">
+                    <span>Banana</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/batata/" target="_blank">
+                    <img src="../img/icones_batata.png" alt="Batata">
+                    <span>Batata</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/batata-doce/" target="_blank">
+                    <img src="../img/icones_batata-doce.png" alt="Batata-doce">
+                    <span>Batata-doce</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/berinjela/" target="_blank">
+                    <img src="../img/icones_berinjela.png" alt="Berinjela">
+                    <span>Berinjela</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/beterraba/" target="_blank">
+                    <img src="../img/icones_beterraba.png" alt="Beterraba">
+                    <span>Beterraba</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/brocolis/" target="_blank">
+                    <img src="../img/icones_brocolis.png" alt="Brócolis">
+                    <span>Brócolis</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/caju/" target="_blank">
+                    <img src="../img/icones_caju.png" alt="Caju">
+                    <span>Caju</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/caqui/" target="_blank">
+                    <img src="../img/icones_caqui.png" alt="Caqui">
+                    <span>Caqui</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/cara/" target="_blank">
+                    <img src="../img/icones_cara.png" alt="Cará">
+                    <span>Cará</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/carambola/" target="_blank">
+                    <img src="../img/icones_carambola.png" alt="Carambola">
+                    <span>Carambola</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/cebola/" target="_blank">
+                    <img src="../img/icones_cebola.png" alt="Cebola">
+                    <span>Cebola</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/cebolinha/" target="_blank">
+                    <img src="../img/icones_cebolinha.png" alt="Cebolinha">
+                    <span>Cebolinha</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/cenoura/" target="_blank">
+                    <img src="../img/icones_cenoura.png" alt="Cenoura">
+                    <span>Cenoura</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/chicoria/" target="_blank">
+                    <img src="../img/icones_chicoria.png" alt="Chicória">
+                    <span>Chicória</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/chuchu/" target="_blank">
+                    <img src="../img/icones_chuchu.png" alt="Chuchu">
+                    <span>Chuchu</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/coco-seco/" target="_blank">
+                    <img src="../img/icones_coco-seco.png" alt="Coco-seco">
+                    <span>Coco-seco</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/coco-verde/" target="_blank">
+                    <img src="../img/icones_coco-verde.png" alt="Coco-verde">
+                    <span>Coco-verde</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/coentro/" target="_blank">
+                    <img src="../img/icones_coentro.png" alt="Coentro">
+                    <span>Coentro</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/couve/" target="_blank">
+                    <img src="../img/icones_couve.png" alt="Couve">
+                    <span>Couve</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/couve-flor/" target="_blank">
+                    <img src="../img/icones_couve-flor.png" alt="Couve-flor">
+                    <span>Couve-flor</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/ervilha/" target="_blank">
+                    <img src="../img/icones_ervilha.png" alt="Ervilha">
+                    <span>Ervilha</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/escarola/" target="_blank">
+                    <img src="../img/icones_escarola.png" alt="Escarola">
+                    <span>Escarola</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/espinafre/" target="_blank">
+                    <img src="../img/icones_espinafre.png" alt="Espinafre">
+                    <span>Espinafre</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/figo/" target="_blank">
+                    <img src="../img/icones_figo.png" alt="Figo">
+                    <span>Figo</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/gengibre/" target="_blank">
+                    <img src="../img/icones_gengibre.png" alt="Gengibre">
+                    <span>Gengibre</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/goiaba/" target="_blank">
+                    <img src="../img/icones_goiaba.png" alt="Goiaba">
+                    <span>Goiaba</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/hortela/" target="_blank">
+                    <img src="../img/icones_hortela.png" alt="Hortelã">
+                    <span>Hortelã</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/inhame/" target="_blank">
+                    <img src="../img/icones_inhame.png" alt="Inhame">
+                    <span>Inhame</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/jabuticaba/" target="_blank">
+                    <img src="../img/icones_jabuticaba.png" alt="Jabuticaba">
+                    <span>Jabuticaba</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/jaca/" target="_blank">
+                    <img src="../img/icones_jaca.png" alt="Jaca">
+                    <span>Jaca</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/jilo/" target="_blank">
+                    <img src="../img/icones_jilo.png" alt="Jiló">
+                    <span>Jiló</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/kiwi/" target="_blank">
+                    <img src="../img/icones_kiwi.png" alt="Kiwi">
+                    <span>Kiwi</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/laranja/" target="_blank">
+                    <img src="../img/icones_laranja.png" alt="Laranja">
+                    <span>Laranja</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/lichia/" target="_blank">
+                    <img src="../img/icones_lichia.png" alt="Lichia">
+                    <span>Lichia</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/limao/" target="_blank">
+                    <img src="../img/icones_limao.png" alt="Limão">
+                    <span>Limão</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/maca/" target="_blank">
+                    <img src="../img/icones_maca.png" alt="Maçã">
+                    <span>Maçã</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/mamao/" target="_blank">
+                    <img src="../img/icones_mamao.png" alt="Mamão">
+                    <span>Mamão</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/mandioca/" target="_blank">
+                    <img src="../img/icones_mandioca.png" alt="Mandioca">
+                    <span>Mandioca</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/mandioquinha/" target="_blank">
+                    <img src="../img/icones_mandioquinha.png" alt="Mandioquinha">
+                    <span>Mandioquinha</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/manga/" target="_blank">
+                    <img src="../img/icones_manga.png" alt="Manga">
+                    <span>Manga</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/manjericao/" target="_blank">
+                    <img src="../img/icones_manjericao.png" alt="Manjericão">
+                    <span>Manjericão</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/maracuja/" target="_blank">
+                    <img src="../img/icones_maracuja.png" alt="Maracujá">
+                    <span>Maracujá</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/maxixe/" target="_blank">
+                    <img src="../img/icones_maxixe.png" alt="Maxixe">
+                    <span>Maxixe</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/melancia/" target="_blank">
+                    <img src="../img/icones_melancia.png" alt="Melancia">
+                    <span>Melancia</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/melao/" target="_blank">
+                    <img src="../img/icones_melao.png" alt="Melão">
+                    <span>Melão</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/mexerica/" target="_blank">
+                    <img src="../img/icones_mexerica.png" alt="Mexerica">
+                    <span>Mexerica</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/milho-verde/" target="_blank">
+                    <img src="../img/icones_milho-verde.png" alt="Milho-verde">
+                    <span>Milho-verde</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/morango/" target="_blank">
+                    <img src="../img/icones_morango.png" alt="Morango">
+                    <span>Morango</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/nabo/" target="_blank">
+                    <img src="../img/icones_nabo.png" alt="Nabo">
+                    <span>Nabo</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/nectarina/" target="_blank">
+                    <img src="../img/icones_nectarina.png" alt="Nectarina">
+                    <span>Nectarina</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/pepino/" target="_blank">
+                    <img src="../img/icones_pepino.png" alt="Pepino">
+                    <span>Pepino</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/pera/" target="_blank">
+                    <img src="../img/icones_pera.png" alt="Pera">
+                    <span>Pera</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/pessego/" target="_blank">
+                    <img src="../img/icones_pessego.png" alt="Pêssego">
+                    <span>Pêssego</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/pimenta/" target="_blank">
+                    <img src="../img/icones_pimenta.png" alt="Pimenta">
+                    <span>Pimenta</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/pimentao/" target="_blank">
+                    <img src="../img/icones_pimentao.png" alt="Pimentão">
+                    <span>Pimentão</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/quiabo/" target="_blank">
+                    <img src="../img/icones_quiabo.png" alt="Quiabo">
+                    <span>Quiabo</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/rabanete/" target="_blank">
+                    <img src="../img/icones_rabanete.png" alt="Rabanete">
+                    <span>Rabanete</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/repolho/" target="_blank">
+                    <img src="../img/icones_repolho.png" alt="Repolho">
+                    <span>Repolho</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/rucula/" target="_blank">
+                    <img src="../img/icones_rucula.png" alt="Rúcula">
+                    <span>Rúcula</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/salsa/" target="_blank">
+                    <img src="../img/icones_salsa.png" alt="Salsa">
+                    <span>Salsa</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/salsao/" target="_blank">
+                    <img src="../img/icones_salsao.png" alt="Salsão">
+                    <span>Salsão</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/tangerina/" target="_blank">
+                    <img src="../img/icones_tangerina.png" alt="Tangerina">
+                    <span>Tangerina</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/tomate/" target="_blank">
+                    <img src="../img/icones_tomate.png" alt="Tomate">
+                    <span>Tomate</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/uva/" target="_blank">
+                    <img src="../img/icones_uva.png" alt="Uva">
+                    <span>Uva</span>
+                </a>
+            </div>
+            <div class="produto-item">
+                <a href="https://ceagesp.gov.br/hortiescolha/hortipedia/vagem/" target="_blank">
+                    <img src="../img/icones_vagem.png" alt="Vagem">
+                    <span>Vagem</span>
+                </a>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>JCS Alimentos</strong> - Alimentação Escolar de Qualidade</p>
+        <p>© 2025 JCS Alimentos. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        // Função de busca de produtos
+        function searchProducts() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const produtos = document.querySelectorAll('.produto-item');
+            const clearBtn = document.getElementById('clearBtn');
+            const searchResults = document.getElementById('searchResults');
+            let visibleCount = 0;
+
+            clearBtn.style.display = input.value ? 'block' : 'none';
+
+            produtos.forEach(produto => {
+                const text = produto.textContent.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                if (text.includes(filter)) {
+                    produto.style.display = '';
+                    visibleCount++;
+                } else {
+                    produto.style.display = 'none';
+                }
+            });
+
+            if (input.value) {
+                searchResults.textContent = visibleCount === 0 
+                    ? 'Nenhum produto encontrado' 
+                    : `${visibleCount} produto${visibleCount !== 1 ? 's' : ''} encontrado${visibleCount !== 1 ? 's' : ''}`;
+            } else {
+                searchResults.textContent = '';
+            }
+        }
+
+        // Função para limpar busca
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            searchProducts();
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', searchProducts);
+        
+        document.getElementById('searchInput').addEventListener('focus', function() {
+            this.style.borderColor = '#ff8c00';
+            this.style.boxShadow = '0 0 0 3px rgba(255, 140, 0, 0.1)';
+        });
+
+        document.getElementById('searchInput').addEventListener('blur', function() {
+            this.style.borderColor = '#e0e0e0';
+            this.style.boxShadow = 'none';
+        });
+    </script>
+</body>
+</html>
