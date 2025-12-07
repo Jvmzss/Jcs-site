@@ -93,16 +93,17 @@ header.scrolled .burger-menu span {
     width: auto;
     object-fit: contain;
     transition: all 0.3s ease;
-    border-radius: 50px; /* Pontas arredondadas */
+    border-radius: 50px;
 }
 
 /* Navigation */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 20px;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 nav a {
@@ -112,8 +113,9 @@ nav a {
     transition: all 0.3s ease;
     font-size: 15px;
     position: relative;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 50px;
+    white-space: nowrap;
 }
 
 nav a::after {
@@ -144,6 +146,7 @@ nav a:hover::after {
     color: var(--primary-orange);
     white-space: nowrap;
     transition: color 0.3s ease;
+    margin-left: 10px;
 }
 
 /* Burger Menu */
@@ -155,6 +158,7 @@ nav a:hover::after {
     padding: 10px;
     background: transparent;
     border: none;
+    z-index: 1001;
 }
 
 .burger-menu span {
@@ -440,10 +444,104 @@ section {
     opacity: 0.95;
 }
 
+/* Seção de Clientes */
+.clientes-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.clientes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clientes-container h2 {
+    color: #10447f;
+    font-size: 32px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.clientes-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8c00, #d1831d);
+    border-radius: 2px;
+}
+
+.clientes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.cliente-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 5px solid #ff8c00;
+}
+
+.cliente-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    border-top-color: #10447f;
+}
+
+.cliente-logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.cliente-card:hover .cliente-logo {
+    transform: scale(1.05);
+    box-shadow: 0 5px 25px rgba(255, 140, 0, 0.2);
+}
+
+.cliente-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.cliente-card h3 {
+    color: #10447f;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cliente-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 /* Diferenciais */
 .diferenciais-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 50px;
     max-width: 1200px;
@@ -652,7 +750,7 @@ section {
 
 .licitacoes-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
     margin-top: 30px;
     position: relative;
@@ -682,6 +780,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contato-info {
@@ -723,7 +823,38 @@ footer {
     padding: 30px 20px;
 }
 
-/* Responsive */
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+
+/* Tablet Grande - 1024px */
+@media (max-width: 1024px) {
+    .sobre-container {
+        gap: 30px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .produtos-lista {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* Tablet - 968px */
 @media (max-width: 968px) {
     body {
         padding-top: 120px;
@@ -738,6 +869,10 @@ footer {
         flex-wrap: wrap;
         padding: 1rem;
         border-radius: 50px;
+    }
+
+    .logo-img {
+        height: 50px;
     }
 
     .burger-menu {
@@ -789,20 +924,549 @@ footer {
     }
 
     .contato-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .licitacoes-info {
+        padding: 40px 30px;
+    }
+
+    .licitacoes-list {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
 }
 
+/* Tablet Pequeno - 768px */
 @media (max-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+
+    header {
+        width: calc(100% - 1.5rem);
+        top: 0.75rem;
+    }
+
+    .header-content {
+        padding: 0.75rem 1rem;
+    }
+
     .hero h2 {
         font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
     }
 
     .section-title {
         font-size: 28px;
     }
 
+    .sobre-text h2 {
+        font-size: 26px;
+    }
+
+    .sobre-text,
+    .missao-container {
+        padding: 30px 25px;
+    }
+
+    .sobre-text p,
+    .sobre-text ul li {
+        font-size: 15px;
+    }
+
+    .missao-box {
+        padding: 25px 20px;
+    }
+
+    .missao-box h3 {
+        font-size: 24px;
+    }
+
+    .missao-item strong {
+        font-size: 16px;
+    }
+
+    .missao-item p {
+        font-size: 14px;
+    }
+
+    .missao-image {
+        height: 250px;
+    }
+
+    .destaque {
+        font-size: 16px;
+        padding: 25px;
+    }
+
+    .clientes-container h2 {
+        font-size: 26px;
+    }
+
+    .cliente-card {
+        padding: 30px;
+    }
+
+    .cliente-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cliente-card h3 {
+        font-size: 20px;
+    }
+
+    .cliente-card p {
+        font-size: 14px;
+    }
+
+    .diferencial-card {
+        padding: 30px 20px;
+    }
+
+    .diferencial-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .diferencial-card h3 {
+        font-size: 20px;
+    }
+
+    .produtos-lista {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 15px;
+    }
+
+    .produto-item {
+        padding: 15px;
+    }
+
+    .licitacoes-info h3 {
+        font-size: 26px;
+    }
+
+    .licitacao-item {
+        padding: 20px;
+    }
+
+    .contato-info {
+        padding: 30px 25px;
+    }
+}
+
+/* Mobile Grande - 576px */
+@media (max-width: 576px) {
+    body {
+        padding-top: 90px;
+    }
+
     header {
-        width: calc(100% - 1.5rem);
+        width: calc(100% - 1rem);
+        top: 0.5rem;
+    }
+
+    .header-content {
+        padding: 0.6rem 0.8rem;
+        border-radius: 40px;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .contact-header {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+    .sobre-text,
+    .missao-container {
+        padding: 25px 20px;
+    }
+
+    .sobre-text h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .sobre-text p,
+    .sobre-text ul li {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .sobre-text ul li {
+        padding-left: 15px;
+    }
+
+    .missao-box {
+        padding: 20px 15px;
+    }
+
+    .missao-box h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .missao-item {
+        padding-left: 25px;
+        margin-bottom: 20px;
+    }
+
+    .missao-item::before {
+        font-size: 16px;
+    }
+
+    .missao-item strong {
+        font-size: 15px;
+    }
+
+    .missao-item p {
+        font-size: 13px;
+    }
+
+    .missao-image {
+        height: 200px;
+    }
+
+    .destaque {
+        font-size: 15px;
+        padding: 20px;
+    }
+
+    .clientes-section {
+        padding: 60px 15px;
+    }
+
+    .clientes-container h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .clientes-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .cliente-card {
+        padding: 25px;
+    }
+
+    .cliente-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cliente-card h3 {
+        font-size: 18px;
+    }
+
+    .cliente-card p {
+        font-size: 13px;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .diferencial-card {
+        padding: 25px 20px;
+    }
+
+    .diferencial-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+
+    .diferencial-card h3 {
+        font-size: 18px;
+    }
+
+    .produtos-lista {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 12px;
+    }
+
+    .produto-item {
+        padding: 12px;
+    }
+
+    .produto-item img {
+        width: 30px;
+        height: 50px;
+    }
+
+    .produto-item a {
+        font-size: 12px;
+    }
+
+    .licitacoes-info {
+        padding: 30px 20px;
+    }
+
+    .licitacoes-info h3 {
+        font-size: 22px;
+    }
+
+    .licitacoes-info p {
+        font-size: 14px;
+    }
+
+    .licitacoes-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .licitacao-item {
+        padding: 15px;
+    }
+
+    .contato-info {
+        padding: 25px 20px;
+    }
+
+    .contato-item {
+        gap: 15px;
+    }
+
+    .contato-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Pequeno - 380px */
+@media (max-width: 380px) {
+    body {
+        padding-top: 85px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .sobre-text h2 {
+        font-size: 20px;
+    }
+
+    .missao-box h3 {
+        font-size: 18px;
+    }
+
+    .clientes-container h2 {
+        font-size: 20px;
+    }
+
+    .produtos-lista {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 10px;
+    }
+
+    .contact-header {
+        font-size: 12px;
+    }
+}
+
+/* Ajustes para orientação paisagem em mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        padding-top: 70px;
+    }
+
+    header {
+        top: 0.25rem;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+}
+
+/* ============================
+   RESPONSIVIDADE DO CARROSSEL BOX
+   ============================ */
+
+/* Desktop padrão - Grid 2x2 com 650px */
+.grid-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    flex-shrink: 0;
+    width: 650px;
+    height: 650px;
+}
+
+/* Tablet Grande - 1024px */
+@media (max-width: 1024px) {
+    .grid-column {
+        width: 550px;
+        height: 550px;
+        gap: 15px;
+    }
+}
+
+/* Tablet - 968px */
+@media (max-width: 968px) {
+    .grid-column {
+        width: 450px;
+        height: 450px;
+        gap: 12px;
+    }
+}
+
+/* Tablet Pequeno - 768px */
+@media (max-width: 768px) {
+    .grid-column {
+        width: 380px;
+        height: 380px;
+        gap: 10px;
+    }
+
+    .carousel-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Mobile Grande - 576px */
+@media (max-width: 576px) {
+    .grid-column {
+        width: 300px;
+        height: 300px;
+        gap: 8px;
+    }
+
+    .carousel-section {
+        padding: 50px 15px;
+    }
+
+    .carousel-section h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .carousel-container {
+        padding: 20px 0;
+    }
+}
+
+/* Mobile Pequeno - 380px */
+@media (max-width: 380px) {
+    .grid-column {
+        width: 250px;
+        height: 250px;
+        gap: 6px;
+    }
+
+    .carousel-section h2 {
+        font-size: 20px;
+    }
+}
+
+/* Ajuste da animação do carrossel para diferentes tamanhos */
+@media (max-width: 1024px) {
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-7370px); }
+    }
+}
+
+@media (max-width: 968px) {
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-6020px); }
+    }
+}
+
+@media (max-width: 768px) {
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-5080px); }
+    }
+}
+
+@media (max-width: 576px) {
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-4010px); }
+    }
+}
+
+@media (max-width: 380px) {
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-3340px); }
     }
 }
