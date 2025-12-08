@@ -1379,59 +1379,137 @@ footer {
 
 /* Tablet - 968px */
 @media (max-width: 968px) {
-    .grid-column {
-        width: 450px;
-        height: 450px;
-        gap: 12px;
+    body {
+        padding-top: 120px;
+    }
+
+    header {
+        width: calc(100% - 2rem);
+        top: 1rem;
+    }
+
+    .header-content {
+        flex-wrap: wrap;
+        padding: 1rem;
+        border-radius: 50px;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    .contact-header {
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    .burger-menu {
+        display: flex;
+        order: 3;
+        margin-left: 1rem;
+    }
+
+    nav {
+        order: 4;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav.active {
+        max-height: 400px;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 1rem !important;
     }
 }
 
 /* Tablet Pequeno - 768px */
 @media (max-width: 768px) {
-    .grid-column {
-        width: 380px;
-        height: 380px;
-        gap: 10px;
+    .logo {
+        order: 1;
     }
 
-    .carousel-section h2 {
-        font-size: 28px;
-        margin-bottom: 30px;
+    .contact-header {
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .burger-menu {
+        order: 3;
+        margin-left: 1rem;
+    }
+
+    nav {
+        order: 4;
     }
 }
 
 /* Mobile Grande - 576px */
 @media (max-width: 576px) {
-    .grid-column {
-        width: 300px;
-        height: 300px;
-        gap: 8px;
+    .logo {
+        order: 1;
     }
 
-    .carousel-section {
-        padding: 50px 15px;
+    .contact-header {
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
     }
 
-    .carousel-section h2 {
-        font-size: 24px;
-        margin-bottom: 25px;
+    .burger-menu {
+        order: 3;
+        margin-left: 0.8rem;
     }
 
-    .carousel-container {
-        padding: 20px 0;
+    nav {
+        order: 4;
     }
 }
 
 /* Mobile Pequeno - 380px */
 @media (max-width: 380px) {
-    .grid-column {
-        width: 250px;
-        height: 250px;
-        gap: 6px;
+    .logo {
+        order: 1;
     }
 
-    .carousel-section h2 {
-        font-size: 20px;
+    .contact-header {
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .burger-menu {
+        order: 3;
+        margin-left: 0.5rem;
+    }
+
+    nav {
+        order: 4;
     }
 }
 
